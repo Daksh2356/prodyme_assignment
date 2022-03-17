@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://xd.adobe.com/static/images/xd_android_webclip_192-f68ab947e37c09acf69cea3122e60893bcc15cb4.png">
+    <title>
+        ProductDetailPage
+    </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .first {
+            background-color: rgba(203, 213, 216, 0.89);
+            display: inline-block;
+            width: 40%;
+            height: 100vh;
+        }
+        .second {
+            background-color: whitesmoke;
+            display: inline-block;
+            width: 60%;
+            height: 100vh;
+        }
+        .desc{
+                padding-left: 150px;
+                display: inline-block;
+        }
+        .para{
+    
+            display: inline-block;
+        }
+        
+        .button-1,.button-2,.button-3{
+            align-items: center;
+            appearance: none;
+            background-color: #fff;
+            border-radius: 24px;
+            border-style: none;
+            box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+            box-sizing: border-box;
+            color: #3c4043;
+            cursor: pointer;
+            display: inline-flex;
+            fill: currentcolor;
+            font-family: "Google Sans",Roboto,Arial,sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 48px;
+            justify-content: center;
+            letter-spacing: .25px;
+            line-height: normal;
+            max-width: 100%;
+            overflow: visible;
+            padding: 2px 24px;
+            position: relative;
+            text-align: center;
+            text-transform: none;
+            transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: auto;
+            will-change: transform,opacity;
+            z-index: 0;
+          }
+
+          .button-4{
+            align-items: center;
+            appearance: none;
+            background-color: rgb(19, 145, 19);
+            border-radius: 24px;
+            border-style: none;
+            box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+            box-sizing: border-box;
+            color: whitesmoke;
+            cursor: pointer;
+            display: inline-flex;
+            fill: currentcolor;
+            font-family: "Google Sans",Roboto,Arial,sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 48px;
+            justify-content: center;
+            letter-spacing: .25px;
+            line-height: normal;
+            max-width: 100%;
+            overflow: visible;
+            padding: 2px 24px;
+            position: relative;
+            text-align: center;
+            text-transform: none;
+            transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: auto;
+            will-change: transform,opacity;
+            z-index: 0;
+          }
+
+          .button-1:hover,.button-2:hover,.button-3:hover{
+            background: #F6F9FE;
+            color: black
+          }
+          .button-4:hover{
+            background: yellowgreen;
+            color: white;
+          }
+
+
+          .button-1:active,.button-2:active,.button-3:active,.button-4:active {
+            box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+            outline: none;
+          }
+
+          .button-1:focus,.button-2:focus,.button-3:focus,.button-4:focus {
+            outline: none;
+            border: 2px solid #4285f4;
+          }
+
+          .button-1:not(:disabled),.button-2:not(:disabled),.button-3:not(:disabled),.button-4:not(:disabled)  {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+          }
+
+          .button-1:not(:disabled):hover,.button-2:not(:disabled):hover,.button-3:not(:disabled):hover,.button-4:not(:disabled):hover {
+            box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+          }
+
+          .button-1:not(:disabled):focus,.button-2:not(:disabled):focus,.button-3:not(:disabled):focus,.button-4:not(:disabled):focus {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+          }
+
+          .button-1:not(:disabled):active,.button-2:not(:disabled):active,.button-3:not(:disabled):active,.button-4:not(:disabled):active  {
+            box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+          }
+
+          .button-1:disabled,.button-2:disabled,.button-3:disabled,.button-4:disabled {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+          }
+
+          .rate {
+          float: left;
+          height: 46px;
+          padding: 0 10px;
+          }
+          .rate:not(:checked) > input {
+          position:absolute;
+          top:-9999px;
+          }
+          .rate:not(:checked) > label {
+          float:right;
+          width:1em;
+          overflow:hidden;
+          white-space:nowrap;
+          cursor:pointer;
+          font-size:30px;
+          color:#ccc;
+          }
+          .rate:not(:checked) > label:before {
+          content: '★ ';
+          }
+          .rate > input:checked ~ label {
+          color: #ffc700;
+          }
+          .rate:not(:checked) > label:hover,
+          .rate:not(:checked) > label:hover ~ label {
+          color: #deb217;
+          }
+          .rate > input:checked + label:hover,
+          .rate > input:checked + label:hover ~ label,
+          .rate > input:checked ~ label:hover,
+          .rate > input:checked ~ label:hover ~ label,
+          .rate > label:hover ~ input:checked ~ label {
+          color: #c59b08;
+          }
+
+          #table{
+              column-gap:40vh;
+          }
+    </style>
+</head>
+<body>
+    <div class="first">
+        Home/ <b>Product Detail Page </b> <br> <br> <br> <br> <br>
+        Tags: 
+        <br><br><br><br>
+        <button class="button-1"> Kitchen </button>
+        <button class="button-2"> L-Shape </button><br><br>
+        <button class="button-3"> Sustainable</button>
+        <button class="button-3"> Corners</button>
+        <button class="button-3"> Furniture</button>
+        <button class="button-3"> Rooom</button>
+        <br><br><br>
+        <br><br><br>
+        <ol>
+           <li><img src="https://st2.depositphotos.com/4612235/6935/i/600/depositphotos_69354373-stock-photo-cross-section-of-plywood.jpg" width="300px" alt="reload"></li>
+           <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGVfuEyKTsIQSu2MedFymlXDp1E7KBtvvJfQp1KGijspGFROBi1Did14uye2wMnZExbYw&usqp=CAU" width="215px" alt="reload"></li>
+           <li><img src="https://media.istockphoto.com/photos/plywood-picture-id172988506?k=20&m=172988506&s=612x612&w=0&h=Gx89O4nuiZrShnlXlwt216R8Bl_Mt5BAnMpjp3nuS0E=" width="215px" alt="reload"></li>
+           <li><img src="https://st2.depositphotos.com/4612235/6935/i/600/depositphotos_69354373-stock-photo-cross-section-of-plywood.jpg" width="215px" alt="reload"></li>
+        </ol>
+        </div><div class="second">
+        <select style="margin: 12px;" name="navbar" id="nav-1"><
+            <option value="Navigation Item A">Navigation Category A </option>
+            <option value="Navigation Item B">Navigation Category B </option>
+        </select>
+        <div style="display: inline-block; padding-left: 25px;">
+            <button onclick="getOption()"> Check option </button>
+        </div>
+        
+        <div  style="display: inline-block; padding-left: 35px;" class="selected"></div>
+    <br><br><br>
+    <h1 style=" margin: 12px;"> Product Name ABC</h1>
+    <p style="margin: 12px;">Product Category Name (Example: Plywood)</p><br><br>
+    <span>
+        <div class="rate">
+            <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
+        </div>
+        <div style="display: inline-block; padding-left: 7px;"><button type="button" style="background-color: white;"
+                onclick="displayRadioValue()">
+                Review
+            </button></div>
+
+        <div id="rating" style="display: inline-block;padding-left: 20px;"><b>4.4 </b>
+        (328 reviews) </div>
+        <div class="head" style="display: inline-block; padding-left: 200px;">
+            <a href="https://xd.adobe.com/view/1adc23f0-31bd-4fe6-ae85-30823ccbc447-4f8f/" style="color: green;">
+                Build My Project
+            </a>
+        </div>
+        <div  style="display: inline-block; padding-left: 200px;"> <img src="https://ii.bj-stc.com/ph/logos/empresas/2010/10/18/prodyme-advertising-97EFB156D9AC7A78thumbnail.gif" alt="reload" ></div>
+        <div class="price" style="display: inline-block; padding-left: 500px;"><b>  &#8377 2110.00 per sheet </b></div>
+    </span>
+    <br> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <div class="desc">
+        <h1>
+            Product Description
+        </h1>
+        <div class="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quae magnam harum rem, illo facilis aperiam fugit atque quisquam. Assumenda, laudantium repudiandae praesentium ratione magni saepe in. Nam earum possimus, facere exercitationem illo rerum deleniti impedit nobis odit quod iste doloremque nulla dolores optio tenetur, accusamus aperiam praesentium quis nostrum laboriosam sit vitae? Voluptates, sit sapiente modi doloribus architecto nostrum alias dolore, ullam beatae laudantium nihil est autem ratione, quo fugit? Repellat repudiandae provident voluptates vero, ullam cum. Tempore molestias, quisquam similique placeat reprehenderit illo, impedit in ullam, omnis rem dolor doloremque doloribus magnam laudantium debitis aperiam quidem incidunt ipsum. Sunt, officia! Sunt minima eligendi sed quo facilis explicabo aspernatur ullam animi, hic, debitis perferendis quidem? Quas earum animi totam quo velit alias est accusantium odit. Earum quas, sapiente nemo architecto repellat blanditiis, sequi, dignissimos dolores voluptatum similique ullam illo quidem accusamus facilis animi incidunt quis ex non accusantium unde maxime commodi! Officia magni reprehenderit aliquam nesciunt, sequi porro quia expedita quis praesentium, ipsa, pariatur a nisi qui ratione sunt amet voluptas ipsam libero. Laudantium modi ipsa iusto, architecto atque culpa aut. Doloribus possimus voluptate odit consectetur et sint vero, cum repellat nisi pariatur reprehenderit aliquid laudantium, nam harum eius. Natus, iure? Illum odio atque, soluta error, culpa nam sapiente quia, accusamus explicabo amet ullam! Dolor velit quasi dolore similique sed aliquid obcaecati assumenda illo accusantium, voluptatibus, ullam veniam id voluptatum nemo. Est, laborum. Aliquid quos placeat sunt odit amet mollitia, quia dignissimos suscipit est voluptatem? Consequuntur officia doloribus veniam corporis doloremque ducimus exercitationem, blanditiis fugit sapiente earum a excepturi soluta perspiciatis dolorem, quis voluptas, nam tenetur alias molestias? Perferendis dolor magni eum sunt. Corrupti ex nulla dolorem tempora cumque tenetur magnam facere labore esse sit fugiat atque, ut aperiam nobis blanditiis asperiores nesciunt repellat illum deserunt. Ex, dolorem soluta.
+        </div>
+
+        <br><br><br><br><br>
+        <span>
+            <div style="display: inline-block;">Available online: <b> 189 </b> 
+                <div style="display: inline-block; padding-left: 300px;">Quantity:
+                    <div class="quantity" style="display: inline-block; padding-left:10px">
+                        <input type="number" min="1" max="9" step="1" value="1">
+                      </div>
+                    <div  style="display: inline-block; padding-left: 250px;"><button class="button-4"> Add to Cart </button></div>
+                </div>
+            </div>
+        </span>   
+        <br><br><br><br>
+        <div id="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Specifications</th>
+                        <th> Reviews</th>
+                        <th> FAQs</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <script>
+        function displayRadioValue() {
+            var ele = document.getElementsByName('rate');
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+
+                    document.getElementById("rating").innerHTML = ele[i].value + ' (328 reviews)';
+            }
+        }
+
+        function getOption() {
+            selectElement = document.querySelector('#nav-1');
+            selected = selectElement.value;
+            document.querySelector('.selected').textContent = selected;
+        }
+       
+    </script>
+</body>
+</html>
